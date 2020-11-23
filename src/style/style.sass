@@ -1,0 +1,682 @@
+*
+    margin: 0
+    padding: 0
+    scroll-behavior: smooth
+    box-sizing: border-box
+
+img
+    width: 100%
+
+@font-face 
+    font-family: "Mariamne"
+    src: url(../fonts/Mariamne.ttf)   
+    font-display: swap
+
+@font-face 
+    font-family: 'Oswald'    
+    src: url(../fonts/Oswald.ttf)
+    font-display: swap
+
+@font-face 
+    font-family: 'Ubuntu'    
+    src: url(../fonts/Ubuntu.ttf)        
+    font-display: swap
+
+.language0 div
+    &:last-child
+        display: none
+
+
+    
+%logoText
+    font-size: 1.5em
+    font-weight: 600
+    letter-spacing: 2px
+    text-transform: uppercase
+    margin-bottom: 10px 
+    font-family: 'Ubuntu', sans-serif
+
+$white-color: #ececec
+$black-color: black
+
+body
+    background: black
+
+header
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 10px 0
+    // box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75)
+    line-height: 1
+    background:  #ececec
+
+.imgMap
+    width: 20px
+    margin-right: 5px
+    & > svg 
+        width: 20px        
+
+.head
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+.headerText
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: #012434
+    letter-spacing: 3px
+    font-size: 2em
+    font-family: 'Oswald', sans-serif
+    // under test version
+    color: $black-color
+
+.fsh
+    font-size: 26px
+    font-family: 'Mariamne'
+    font-weight: 1000
+    color: #012434
+    text-align: center
+    // under test version
+    color: $black-color
+
+// #languages option
+//     &:first-child
+//         display: none
+
+.burgerMenu    
+    margin-right: 20px
+    cursor: pointer
+    width: 60px
+    &:hover
+        opacity: 0.7
+
+.record
+    color: black
+    &:hover
+        opacity: 0.9
+    &:visited
+        color: black
+
+.navibar
+    display: none
+    flex-direction: column
+    align-items: center     
+
+    & > a
+        display: flex
+        align-items: center
+        font-family: 'Ubuntu', sans-serif
+        text-decoration: none
+        text-transform: uppercase
+        color: black
+        margin: 10px
+        width: max-content
+        height: 100%
+        color: white
+
+        &:hover
+            text-decoration: underline
+            color: black
+            cursor: pointer
+            // under test version
+            color: white
+
+.forLanguageButton
+    position: absolute
+    display: flex
+    flex-direction: column
+    background: white
+    font-size: 2em
+    border-radius: 0 0 10px 10px
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75)
+    cursor: pointer
+
+    &::before
+            content: ""
+            position: absolute
+            top: -10px
+            left: 30px
+            height: 0
+            width: 0 
+            border: 
+                right: 10px solid transparent
+                left:  10px solid transparent
+                bottom: 10px solid #999999e8
+
+    button
+        font-family: 'Ubuntu', sans-serif
+        font-size: 1em
+        border: 0
+        background: 0
+        padding: 10px 40px
+
+        &:last-child
+            border-radius: 0 0 10px 10px
+
+        &:hover
+            background: #cdcdcd7d
+
+        &:focus
+            outline: none
+
+.titleText
+    width: 100%
+    text-align: center
+    padding: 20px
+    text-transform: uppercase
+    font-family: 'Oswald'
+    box-shadow: 0px 0px 54px 1px rgba(0,0,0,0.8)
+
+.miniAboutUsContainer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 20px
+    background-image: url('../images/31.png')
+    // background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+main
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.someContainer
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    & > div
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 150px
+        height: 190px
+
+.sectionImage
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 20px
+    color: $black-color
+    font-family: Oswald
+    background-color: $white-color
+    background-image: url('../images/32.png')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+    a 
+        border: 2px solid $black-color
+        border-radius: 5px
+        // padding: 5px 10px 
+        // background: black
+        // color: $black-color
+        width: fit-content
+        text-decoration: none
+
+        &:hover
+            border-color: #434343            
+        &:visited
+            color: $black-color
+
+.changePadding
+    padding: 5px 10px
+
+.linkAddPadding
+    padding: 10px 20px
+
+
+.sectionImageDataLink
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: black
+    & img 
+        width: 20px
+        margin-right: 5px
+    &:hover
+        opacity: 0.9
+    &:visited
+        color: black    
+
+.headerTextHaircut
+    font-size: 9px
+    text-align: center
+    &:first-of-type
+        padding-bottom: 2px
+
+.miniAboutUsImages
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    width: 100px
+    height: 80px
+
+    img 
+        width: 50px
+        margin-right: 0 
+
+.miniAboutUsLogoText
+    font-family: Oswald
+    text-transform: uppercase
+    text-align: center
+    font-size: 1.2em
+    color: #056977
+    margin-bottom: 10px
+
+.dandylandStyleContainer
+    display: flex
+    flex-direction: row
+
+.hundrudOnEighty
+    width: 100px
+    height: 80px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.newStyleThing
+    display: flex
+    flex-direction: column
+    background: black
+    color: yellow
+    border-radius: 50%
+    height: 60px
+    width: 60px
+    align-items: center
+    justify-content: center
+    font-weight: bold
+    font-size: 12px
+    font-family: oswald
+    
+
+.linkItMini
+    color: black
+    text-decoration: none
+    font-family: oswald
+    border: 1px solid black
+    border-radius: 5px
+    padding: 2px 5px
+
+
+.miniAboutUsText        
+    font-family: Oswald
+    text-align: center
+    & > div
+        margin-bottom: 5px
+
+.miniAboutUs
+    display: flex
+    justify-content: center
+    flex-direction: column
+    flex-wrap: wrap
+    background: #ececec
+    // padding: 20px 10px
+    width: 100%
+
+    // & > div
+    //     margin: 0 10px
+    //     display: flex
+    //     flex-direction: column
+    //     align-items: center
+
+.price
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 100%
+    background: $white-color
+    color: $black-color
+    // padding: 10px 0
+    font-family: Oswald
+    text-transform: uppercase
+    letter-spacing: 3px
+
+.priceEl
+    width: 300px
+    display: flex
+    justify-content: space-between
+    margin: 10px 0
+
+.sectionImageContainerVkInst
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-right: 100px
+    a
+        width: 40px
+
+        img 
+            margin-right: 0
+        &:first-of-type
+            margin-right: 10px
+
+.sectionImageDataClock
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    & > img
+        width: 100%              
+        margin-right: 5px  
+
+.sectionImageDataContainerClock
+    display: flex
+    flex-direction: row
+    font-size: 25px
+
+.sectionImageImg
+    width: 90%
+
+.sectionImageData
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-left: 20px
+    div:last-child
+        display: flex
+        flex-direction: row
+
+    // div:nth-child(1)        
+    //     width: auto
+    & > div
+        margin: 10px 0
+
+
+.recordContainer
+    display: flex
+    flex-direction: row
+    &:hover
+        color: #ababab
+
+.phoneLinkWidth
+    width: 160px
+
+.test
+    display: flex
+    justify-content: center
+    // background: rgba(0, 0, 0, 0.85)
+    color: white
+    padding: 20px
+
+
+
+.sectionGallery
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    width: 100%
+    background: $white-color
+.galleryEl
+    width: 50%
+    display: block
+    object-fit: cover
+    object-position: center 
+    &:hover
+        animation-name: scaleImg
+        animation-duration: 1s
+        animation-fill-mode: forwards
+        animation-timing-function: ease-in-out
+
+@keyframes scaleImg
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(1.2)
+
+.noBottomMargin
+    margin-bottom: 0
+    margin-top: 0
+
+.overflowHidden
+    overflow: hidden
+
+.burgerLink
+    text-transform: uppercase
+    text-decoration: none
+    color: white
+    font-family: Oswold
+    letter-spacing: 3px
+    margin: 5px
+    font-size: 1.5em
+
+
+.burgerMain
+    position: absolute
+    left: 0
+    top: 0
+    color: white
+    width: 100%
+    display: flex
+    justify-content: center
+    height: 100vh
+    align-items: center
+    background: #222222e3
+    flex-direction: column
+
+.crossBurger
+    position: absolute
+    right: 26px
+    top: 12px
+    width: 50px
+
+.galleryContainer
+    display: flex
+    // max-width: 900px    
+
+.column
+    display: flex
+    flex-direction: column
+    width: 50%
+    & > div
+        width: 100% 
+
+.galleryItem
+    img
+        display: block
+
+.aboutUs
+    width: 100%
+    background-image: url('../images/16.jpg')
+    background-size: cover
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75)
+
+.warningWidth
+    display: flex
+    flex-direction: column
+    align-items: center
+    // font-size: 1.2em
+    width: 210px
+    // margin-bottom: 20px
+
+.aboutBarbershop
+    @extend %logoText
+
+.aboutBarbershopLogoText
+    @extend %logoText
+    margin-top: 10px
+
+.something
+    font-size: 1em
+
+.some
+    font-size: 14px
+
+.fsh2
+    font-family: Mariamne, sans-serif
+
+.anotherTest
+    padding: 20px
+
+    & > div
+        padding: 10px 0
+
+.warningMarginLeft
+    margin-left: 14px
+
+.someWidth
+    width: 160px
+
+.aboutBarbershopText0
+    font-family: 'Ubuntu', sans-serif
+    // padding: 10px
+    
+    &:last-child
+        margin: 
+            bottom: 10px
+
+.aboutBarbershopText1        
+    font-family: 'Ubuntu', sans-serif
+    margin: 10px 0
+
+.aboutUsMain
+    max-width: 650px
+    visibility: hidden
+
+.contacts
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background: $white-color
+    // box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75)
+    width: 100%
+    color: $black-color
+    background-image: url('../images/31.png')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+
+    iframe 
+        width: 100% 
+
+.map
+    margin-top: 10px
+
+.sectionImageDataPhone
+    display: flex
+    align-items: center
+    & > img
+        width: 20px 
+
+footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: 100px
+    background: $white-color
+    font-size: 2em
+    padding: 0 15px 
+
+    div 
+        font-family: 'Mariamne'
+        font-weight: 1000
+        color: $black-color
+
+.recordAboveFooter a
+    border: 1px solid #1e1e1e
+    padding: 10px 20px
+    border-radius: 5px
+    text-decoration: none
+    color: black
+    font-size: 1.1em
+    letter-spacing: 1px
+    font-family: Oswald 
+    &:hover
+        border-color: #8e8d8d
+
+@media only screen and (min-width: 576px) 
+    .sectionImageData
+        align-items: flex-start
+    .sectionImage
+        flex-direction: row
+    .sectionImageImg
+        width: 50%
+        
+
+    .burgerMenu
+        width: 50px
+    .galleryEl
+        width: 25%
+
+@media only screen and (min-width: 800px) 
+    header
+        flex-direction: row        
+
+    .head
+        justify-content: space-between
+        // width: 100%
+        margin-left: 20px
+        max-width: 540px
+
+    .navibar
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        margin: 0 20px
+
+        #languages
+            display: none
+        
+
+    .burgerMenu
+        display: none        
+        
+    header
+        justify-content: space-around
+
+    .empty
+        display: flex
+        flex-direction: column
+        align-items: center
+        // width: min-content
+        font-size: 2em
+        border: 0
+        background: 0            
+        cursor: pointer
+        width: 50px
+        & > img 
+            width: 50px
+
+        &:hover
+            opacity: 0.5
+
+        &:focus
+            outline: 0          
+
+    .sectionImageImg
+        width: 350px
+
+    .column
+        flex-direction: row
+        & > div
+            width: 50%
+
+@media only screen and (max-width: 800px)     
+    .empty
+        visibility: hidden
+        width: 30px
+        
+
+        
+.disFlex
+    display: flex    
+
+.disNone
+    display: none    
